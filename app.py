@@ -20,7 +20,6 @@ def pygment_code():
     return jsonify({'result': result}), 201
 
 
-
 @app.route('/guessCode', methods=['POST'])
 def guess_code():
     if not request.json:
