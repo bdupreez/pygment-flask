@@ -15,7 +15,7 @@ def pygment_code():
         abort(400)
 
     lexer = get_lexer_by_name(request.json['lexer'], stripall=True)
-    formatter = HtmlFormatter(linenos=True, cssclass="source")
+    formatter = HtmlFormatter(linenos=False)
     result = highlight(request.json['code'], lexer, formatter)
     return jsonify({'result': result}), 201
 
