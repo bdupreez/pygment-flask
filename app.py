@@ -9,6 +9,7 @@ from pygments.lexers import guess_lexer
 
 app = Flask(__name__)
 
+
 @app.route('/pygmentCode', methods=['POST'])
 def pygment_code():
     if not request.json:
